@@ -1,0 +1,24 @@
+body {
+  background: black;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 98vh;
+  image-rendering: pixelated;
+  overflow: hidden;
+}
+
+canvas {
+  background: white;
+  width: min(80vh, 80vw);
+  padding: 5px;
+  border: 1px solid black;
+}
+
+img {
+  display: none;
+  position: absolute;
+  width: 100vw;
+}

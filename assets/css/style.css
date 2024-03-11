@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'zine';
+  src: url('../font/zine.ttf');
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+
+  background: url('https://github.com/alaanvv/Image-Database/blob/main/Misc/memes.jpg?raw=true') 100% 100%;
+  overflow: hidden;
+}
+
+.content {
+  width: 40%;
+  height: 100%;
+  padding: 2.5em 5em;
+  margin: 0 auto;
+  
+  background: #FFF;
+  box-shadow: 0 0 10px black;
+}
+
+img {
+  border: 5px solid black;
+}
+
+.subtitle, footer {
+  text-align: center;
+}
+
+li {
+  margin-top: 2em;
+}
+
+li p {
+  max-width: 60%;
+}
+
+.special-text {
+  font-family: 'zine';
+  font-size: 1.5em;
+}
