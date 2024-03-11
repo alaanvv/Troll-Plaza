@@ -6,7 +6,7 @@ canvas.height = canvas.width
 
 // ---
 
-let pad_position = 0
+let pad_x = 0
 const ball = {
   x: 0.5,
   y: 0.5,
@@ -22,7 +22,7 @@ let started
 function render() {
   move_ball()
   ctx.clearRect(0, 0, canvas.width, canvas.height)
-  ctx.fillRect(canvas.width * pad_position, canvas.height - 10, 50, 5)
+  ctx.fillRect(canvas.width * pad_x, canvas.height - 10, 50, 5)
   ctx.fillRect(canvas.width * ball.x, canvas.height * ball.y, 10, 10)
 
   setTimeout(render, speed)
@@ -37,7 +37,7 @@ function move_ball() {
   if (ball.x <= 0  || ball.x > (canvas.width  - 10) / canvas.width) 
     ball.a = Math.PI - ball.a
 
-  if (ball.y <= 0 || ball.y >= (canvas.height - 20) / canvas.height && ball.y < 1 && ball.x >= pad_position && ball.x <= pad_position + (50 / canvas.width)) {
+  if (ball.y <= 0 || ball.y >= (canvas.height - 20) / canvas.height && ball.y < 1 && ball.x >= pad_x && ball.x <= pad_x + (50 / canvas.width)) {
     ball.a *= -1
     if (++bounces == 6) {
       canvas.style.display = 'none'
@@ -48,9 +48,9 @@ function move_ball() {
 }
 
 document.body.addEventListener('keydown', e => {
-  if      (e.key == 'ArrowLeft')  pad_position -= 0.03
-  else if (e.key == 'ArrowRight') pad_position += 0.03
-  pad_position = Math.max(0, Math.min((canvas.width - 50) / canvas.width, pad_position))
+  if      (e.key == 'ArrowLeft')  pad_x -= 0.03
+  else if (e.key == 'ArrowRight') pad_x += 0.03
+  pad_x = Math.max(0, Math.min((canvas.width - 50) / canvas.width, pad_x))
 })
 
 document.body.addEventListener('click', _ => { if (!started) { started = 1; render() }})

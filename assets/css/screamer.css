@@ -1,24 +1,29 @@
 body {
-  background: black;
+  width: 100vw;
+  height: 98vh;
   margin: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 98vh;
-  image-rendering: pixelated;
+
+  background: black;
   overflow: hidden;
+
+  image-rendering: pixelated;
 }
 
 canvas {
-  background: white;
   width: min(80vh, 80vw);
   padding: 5px;
   border: 1px solid black;
+
+  background: white;
 }
 
 img {
+  width: 100vw;
+
   display: none;
   position: absolute;
-  width: 100vw;
 }
