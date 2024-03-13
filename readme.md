@@ -9,10 +9,3 @@
 # Contribute
 Feel free to add any tools here, this project isn't supposed to  
 hold complex and amazing ideas
-
----
-
-# Todo
-- Fake PNG generator
-- Fake misfortune wheel
-- Screamer
