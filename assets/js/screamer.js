@@ -1,3 +1,5 @@
+// TODO Trim the scream
+
 const scream = new Audio('./assets/audio/scream.mp3')
 const canvas = document.querySelector('canvas')
 const img = document.querySelector('img')
@@ -16,6 +18,8 @@ const ball = {
 let bounces = 0
 let speed = 10
 let started
+
+ctx.fillText('Record: 4 (ALN)', 5, 10)
 
 // ---
 
